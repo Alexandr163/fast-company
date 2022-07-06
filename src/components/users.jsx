@@ -19,7 +19,7 @@ const Users = () => {
 
     };
 
-    const handlerClick = (id) => {
+    const handleClick = (id) => {
 
         setUsers((prevState) => prevState.filter(users => users._id !== id));
     
@@ -35,7 +35,7 @@ const Users = () => {
                         <td>{user.profession.name}</td>
                         <td>{user.completedMeetings}</td>
                         <td>{user.rate}/5</td>
-                        <td><button className='btn btn-danger' onClick = {() => handlerClick(user._id)}>delete</button></td>
+                        <td><button className='btn btn-danger' onClick = {() => handleClick(user._id)}>delete</button></td>
                     </tr>;  
 
             });
@@ -89,7 +89,7 @@ const Users = () => {
                 </table>
                 </>
         } else{
-            result =  <span className={getBadgeClasses()}>Никто не хочет с тобой тусить</span>;
+            result =  <span className={getBadgeClasses()}>Никто с тобой не тусанет</span>;
         };
 
            return result;
