@@ -19,7 +19,7 @@ const Users = () => {
 
     };
 
-    const handleClick = (id) => {
+    const handleDelete = (id) => {
 
         setUsers((prevState) => prevState.filter(users => users._id !== id));
     
@@ -35,7 +35,7 @@ const Users = () => {
                         <td>{user.profession.name}</td>
                         <td>{user.completedMeetings}</td>
                         <td>{user.rate}/5</td>
-                        <td><button className='btn btn-danger' onClick = {() => handleClick(user._id)}>delete</button></td>
+                        <td><button className='btn btn-danger' onClick = {() => handleDelete(user._id)}>delete</button></td>
                     </tr>;  
 
             });
@@ -80,7 +80,7 @@ const Users = () => {
                             <th scope="col">Профессия</th>
                             <th scope="col">Встретился, раз</th>
                             <th scope="col">Оценка</th>
-                            <th scope="col">Ubn</th>
+                            <th scope="col"></th>
                         </tr>
                     </thead>
                     <tbody>
