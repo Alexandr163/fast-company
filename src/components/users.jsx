@@ -74,8 +74,6 @@ const Users = () => {
         } else{
             result = textCount(0)
         };
-
-        return result;           
+        return result;      
     };
-
 export default Users;
