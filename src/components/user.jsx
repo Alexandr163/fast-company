@@ -27,7 +27,7 @@ const User = (props) => {
       <td>
         <Bookmark
           id={_id}
-          fildBookMark={fieldBookMark}
+          fieldBookMark={fieldBookMark}
           onToggleBookMark={handleToggleBookMark}
         />
       </td>
