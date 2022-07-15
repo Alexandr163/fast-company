@@ -1,11 +1,12 @@
 import React from "react";
 
 const Bookmark = (props) => {
-  let classes = props.fieldBookMark ? "bi bi-heart-fill" : "bi bi-heart";
+  const { fieldBookMark, id, onToggleBookMark } = props;
+  let classes = fieldBookMark ? "bi bi-heart-fill" : "bi bi-heart";
   return (
     <button
       className="btn btn-outline-danger"
-      onClick={() => props.onToggleBookMark(props.id)}
+      onClick={() => onToggleBookMark(id)}
     >
       <i className={classes}></i>
     </button>
