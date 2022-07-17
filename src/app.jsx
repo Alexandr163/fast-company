@@ -25,11 +25,13 @@ const App = () => {
   return (
     <>
       <SearchStatus length={users.length} />
-      <Users
-        users={users}
-        handleDelete={handleDelete}
-        handleToggleBookMark={handleToggleBookMark}
-      />
+      {users.length > 0 && (
+        <Users
+          users={users}
+          handleDelete={handleDelete}
+          handleToggleBookMark={handleToggleBookMark}
+        />
+      )}
       ;
     </>
   );
