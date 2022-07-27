@@ -35,8 +35,8 @@ GroupList.propTypes = {
     items: PropTypes.object.isRequired,
     valueProperty: PropTypes.string.isRequired,
     contentProperty: PropTypes.string.isRequired,
-    onItemSelect: PropTypes.func.isRequired,
-    selectedItem: PropTypes.object.isRequired
+    onItemSelect: PropTypes.func,
+    selectedItem: PropTypes.object
 };
 
 export default GroupList;
