@@ -33,6 +33,7 @@ const Users = ({ users, ...rest }) => {
     const clearFilter = () => {
         setSelectedProf();
     };
+
     return (
         <div className="d-flex">
             {professions && (
