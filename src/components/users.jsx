@@ -6,6 +6,7 @@ import api from "../api";
 import PropTypes from "prop-types";
 import GroupList from "./groupList";
 import SearchStatus from "./searchStatus";
+import _ from "lodash";
 
 const Users = ({ users, ...rest }) => {
     const [currentPage, setCurrentpage] = useState(1);
@@ -22,13 +23,16 @@ const Users = ({ users, ...rest }) => {
     const handleProfessionSelect = (item) => {
         setSelectedProf(item);
     };
+    console.log("set", selectedProf);
     const handlePageChange = (pageIndex) => {
         setCurrentpage(pageIndex);
     };
-    const filteredUsers = selectedProf
-        ? users.filter((user) => user.profession === selectedProf)
-        : users;
+    const filteredUsers = selectedProf ? users.filter((user) => _.isEqual(user.profession, selectedProf)) : users;
+    console.log("filteredUsers", filteredUsers);
     const count = filteredUsers.length;
+    if ((currentPage - 1) * pageSize >= filteredUsers.length) {
+        setCurrentpage(currentPage - 1);
+    }
     const userCrop = paginate(filteredUsers, currentPage, pageSize);
     const clearFilter = () => {
         setSelectedProf();
