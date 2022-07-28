@@ -23,12 +23,12 @@ const Users = ({ users, ...rest }) => {
     const handleProfessionSelect = (item) => {
         setSelectedProf(item);
     };
-    console.log("set", selectedProf);
     const handlePageChange = (pageIndex) => {
         setCurrentpage(pageIndex);
     };
-    const filteredUsers = selectedProf ? users.filter((user) => _.isEqual(user.profession, selectedProf)) : users;
-    console.log("filteredUsers", filteredUsers);
+    const filteredUsers = selectedProf
+        ? users.filter((user) => _.isEqual(user.profession, selectedProf))
+        : users;
     const count = filteredUsers.length;
     if ((currentPage - 1) * pageSize >= filteredUsers.length) {
         setCurrentpage(currentPage - 1);
