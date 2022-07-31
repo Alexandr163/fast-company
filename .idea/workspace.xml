@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3ce93e6-7276-4721-a53c-a20672f09913" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="b3ce93e6-7276-4721-a53c-a20672f09913" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,6 +23,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Project.color&quot;: &quot;425505&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
@@ -50,7 +52,13 @@
       <workItem from="1658606691607" duration="81000" />
       <workItem from="1658607621489" duration="192000" />
       <workItem from="1658648629047" duration="109000" />
-      <workItem from="1658650456047" duration="12112000" />
+      <workItem from="1658650456047" duration="12479000" />
+      <workItem from="1658766366526" duration="195000" />
+      <workItem from="1658766577134" duration="199000" />
+      <workItem from="1658766788191" duration="75000" />
+      <workItem from="1658766875794" duration="90000" />
+      <workItem from="1658779837641" duration="73000" />
+      <workItem from="1659099766934" duration="539000" />
     </task>
     <servers />
   </component>
