@@ -9,9 +9,9 @@ import UserTable from "./usersTable";
 import _ from "lodash";
 const Users = () => {
     const [currentPage, setCurrentPage] = useState(1);
-    const [professions, setProfesionns] = useState();
+    const [professions, setProfession] = useState();
     const [selectedProf, setSelectedProf] = useState();
-    const [sortBy, setSortBy] = useState({ iter: "name", order: "asc" });
+    const [sortBy, setSortBy] = useState({ path: "name", order: "asc" });
     const pageSize = 8;
 
     const [users, setUsers] = useState();
@@ -32,14 +32,17 @@ const Users = () => {
     };
 
     useEffect(() => {
-        api.professions.fetchAll().then((data) => setProfesionns(data));
+        api.professions.fetchAll().then((data) => setProfession(data));
     }, []);
+
     useEffect(() => {
         setCurrentPage(1);
     }, [selectedProf]);
+
     const handleProfessionSelect = (item) => {
         setSelectedProf(item);
     };
+
     const handlePageChange = (pageIndex) => {
         setCurrentPage(pageIndex);
     };
@@ -55,19 +58,14 @@ const Users = () => {
                       JSON.stringify(selectedProf)
               )
             : users;
+
         const count = filteredUsers.length;
-        if ((currentPage - 1) * pageSize >= filteredUsers.length) {
-            setCurrentPage(currentPage - 1);
-        }
-        const sortedUsers = _.orderBy(
-            filteredUsers,
-            [sortBy.path],
-            [sortBy.order]
-        );
+        const sortedUsers = _.orderBy(filteredUsers, [sortBy.path], [sortBy.order]);
         const usersCrop = paginate(sortedUsers, currentPage, pageSize);
         const clearFilter = () => {
             setSelectedProf();
         };
+
         return (
             <div className="d-flex">
                 {professions && (
@@ -109,9 +107,10 @@ const Users = () => {
             </div>
         );
     }
-    return "Loading...";
+    return "loading...";
 };
 Users.propTypes = {
     users: PropTypes.array
 };
+
 export default Users;
