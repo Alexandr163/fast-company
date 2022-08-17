@@ -24,7 +24,13 @@ const UserPage = ({ id }) => {
                 <h5>{`CompletedMeetings: ${user.completedMeetings}`}</h5>
                 <h1>{`Rate: ${user.rate}`}</h1>
 
-                <button type="button" className="btn btn-outline-secondary" onClick={handleReturne}>Все пользователи</button>
+                <button
+                    type="button"
+                    className="btn btn-outline-secondary"
+                    onClick={handleReturne}
+                >
+                    Все пользователи
+                </button>
             </>
         );
     } else {
