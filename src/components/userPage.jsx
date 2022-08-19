@@ -16,6 +16,7 @@ const UserPage = ({ userId }) => {
     if (user) {
         return (
             <div>
+<<<<<<< HEAD
                 <h1> {user.name}</h1>
                 <h2>Профессия: {user.profession.name}</h2>
                 <QualitiesList qualities={user.qualities} />
@@ -28,6 +29,20 @@ const UserPage = ({ userId }) => {
                 >
                     {" "}
                     Все Пользователи
+=======
+                <h1>{user.name}</h1>
+                <h2>{`Професиия: ${user.profession.name}`}</h2>
+                <QualitiesList qualities={user.qualities} />
+                <p>{`CompletedMeetings: ${user.completedMeetings}`}</p>
+                <h2>{`Rate: ${user.rate}`}</h2>
+
+                <button
+                    type="button"
+                    className="btn btn-outline-secondary"
+                    onClick={handleClick}
+                >
+                    Все пользователи
+>>>>>>> 50bdc769988d1130411ddfc285ca739cf5dff0a7
                 </button>
             </div>
         );
@@ -37,7 +52,11 @@ const UserPage = ({ userId }) => {
 };
 
 UserPage.propTypes = {
+<<<<<<< HEAD
     userId: PropTypes.string.isRequired
+=======
+    userId: PropTypes.string
+>>>>>>> 50bdc769988d1130411ddfc285ca739cf5dff0a7
 };
 
 export default UserPage;
