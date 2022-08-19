@@ -4,44 +4,40 @@ import api from "../api";
 import QualitiesList from "./qualitiesList";
 import { useHistory } from "react-router-dom";
 
-const UserPage = ({ id }) => {
+const UserPage = ({ userId }) => {
     const history = useHistory();
     const [user, setUser] = useState();
     useEffect(() => {
-        api.users.getById(id).then((data) => setUser(data));
-    }, []);
-
-    let renderUserPage = null;
-    const handleReturne = () => {
-        history.replace("/users");
+        api.users.getById(userId).then((data) => setUser(data));
+    });
+    const handleClick = () => {
+        history.push("/users");
     };
     if (user) {
-        renderUserPage = (
-            <>
+        return (
+            <div>
                 <h1>{user.name}</h1>
                 <h2>{`Професиия: ${user.profession.name}`}</h2>
                 <QualitiesList qualities={user.qualities} />
-                <h5>{`CompletedMeetings: ${user.completedMeetings}`}</h5>
-                <h1>{`Rate: ${user.rate}`}</h1>
+                <p>{`CompletedMeetings: ${user.completedMeetings}`}</p>
+                <h2>{`Rate: ${user.rate}`}</h2>
 
                 <button
                     type="button"
                     className="btn btn-outline-secondary"
-                    onClick={handleReturne}
+                    onClick={handleClick}
                 >
                     Все пользователи
                 </button>
-            </>
+            </div>
         );
     } else {
-        renderUserPage = "loading...";
+        return <h1>Loading</h1>;
     }
-
-    return renderUserPage;
 };
 
 UserPage.propTypes = {
-    id: PropTypes.string
+    userId: PropTypes.string
 };
 
 export default UserPage;

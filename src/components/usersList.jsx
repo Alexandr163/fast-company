@@ -1,12 +1,37 @@
-import { React } from "react";
-import { useParams } from "react-router-dom";
-import UserPage from "./userPage";
-import Users from "./users";
+import React, { useState, useEffect} from "react";
+import PropTypes from "prop-types";
+import { paginate } from "../utils/paginate";
+import Pagination from "./pagination";
+import api from "../api";
+import GroupList from "./groupList";
+import SearchStatus from "./searchStatus";
+import UserTable from "./usersTable";
+import _ from "lodash";
 
-const UsersList = () => {
-    const { usersId } = useParams();
+const UserList = () => {
+    const [currentPage, setCurrentPage] = useState(1);
+    const [professions, setProfession] = useState();
+    const [selectedProf, setSelectedProf] = useState();
+    const [sortBy, setSortBy] = useState({ path: "name", order: "asc" });
+    const pageSize = 8;
 
-    return usersId ? <UserPage id={usersId} /> : <Users />;
-};
-
-export default UsersList;
+    const [users, setUsers] = useState();
+    useEffect(() => {
+        api.users.fetchAll().then((data) => setUsers(data));
+    }, []);
+    const handleDelete = (userId) => {
+        setUsers(users.filter((user) => user._id !== userId));
+    };
+    const handleToggleBookMark = (id) => {
+        const newArray = users.map((user) => {
+            if (user._id === id) {
+                return { ...user, bookmark: !user.bookmark };
+            }
+            return user;
+        });
+        setUsers(newArray);
+    };
+    return (  );
+}
+ 
+export default UserList;
