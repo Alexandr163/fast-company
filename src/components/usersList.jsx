@@ -11,12 +11,17 @@ const UsersList = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [professions, setProfession] = useState();
     const [selectedProf, setSelectedProf] = useState();
+    const [usersInitial, setUsersInitial] = useState();
     const [sortBy, setSortBy] = useState({ path: "name", order: "asc" });
+    const [searchUser, setSearchUser] = useState("");
     const pageSize = 8;
 
     const [users, setUsers] = useState();
     useEffect(() => {
-        api.users.fetchAll().then((data) => setUsers(data));
+        api.users.fetchAll().then((data) => {
+            setUsers(data);
+            setUsersInitial(data);
+        });
     }, []);
     const handleDelete = (userId) => {
         setUsers(users.filter((user) => user._id !== userId));
@@ -41,6 +46,8 @@ const UsersList = () => {
 
     const handleProfessionSelect = (item) => {
         setSelectedProf(item);
+        setSearchUser("");
+        setUsers(usersInitial);
     };
 
     const handlePageChange = (pageIndex) => {
@@ -70,6 +77,21 @@ const UsersList = () => {
             setSelectedProf();
         };
 
+        const handleSearch = (e) => {
+            setSearchUser(e.target.value);
+
+            if (e.target.value !== "") {
+                setUsers(
+                    usersInitial.filter((user) => {
+                        const serachRegExp = new RegExp(`${e.target.value}`);
+                        return user.name.search(serachRegExp) !== -1;
+                    })
+                );
+            } else {
+                setUsers(usersInitial);
+            }
+        };
+
         return (
             <div className="d-flex">
                 {professions && (
@@ -90,6 +112,15 @@ const UsersList = () => {
                 )}
                 <div className="d-flex flex-column">
                     <SearchStatus length={count} />
+                    <input
+                        value={searchUser}
+                        onChange={handleSearch}
+                        type="text"
+                        id="disabledTextInput"
+                        className="form-control"
+                        onClick={clearFilter}
+                        placeholder="Search..."
+                    />
                     {count > 0 && (
                         <UserTable
                             users={usersCrop}
