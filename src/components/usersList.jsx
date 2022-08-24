@@ -11,7 +11,7 @@ const UsersList = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [professions, setProfession] = useState();
     const [selectedProf, setSelectedProf] = useState();
-    const [usersInitial, setUsersInitial] = useState();
+    const [initialUsers, setInitialUsers] = useState();
     const [sortBy, setSortBy] = useState({ path: "name", order: "asc" });
     const [searchUser, setSearchUser] = useState("");
     const pageSize = 8;
@@ -20,7 +20,7 @@ const UsersList = () => {
     useEffect(() => {
         api.users.fetchAll().then((data) => {
             setUsers(data);
-            setUsersInitial(data);
+            setInitialUsers(data);
         });
     }, []);
     const handleDelete = (userId) => {
@@ -47,7 +47,7 @@ const UsersList = () => {
     const handleProfessionSelect = (item) => {
         setSelectedProf(item);
         setSearchUser("");
-        setUsers(usersInitial);
+        setUsers(initialUsers);
     };
 
     const handlePageChange = (pageIndex) => {
@@ -82,13 +82,13 @@ const UsersList = () => {
 
             if (e.target.value !== "") {
                 setUsers(
-                    usersInitial.filter((user) => {
+                    initialUsers.filter((user) => {
                         const serachRegExp = new RegExp(`${e.target.value}`);
                         return user.name.search(serachRegExp) !== -1;
                     })
                 );
             } else {
-                setUsers(usersInitial);
+                setUsers(initialUsers);
             }
         };
 
