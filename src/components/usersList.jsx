@@ -11,7 +11,6 @@ const UsersList = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [professions, setProfession] = useState();
     const [selectedProf, setSelectedProf] = useState();
-    const [initialUsers, setInitialUsers] = useState();
     const [sortBy, setSortBy] = useState({ path: "name", order: "asc" });
     const [searchUser, setSearchUser] = useState("");
     const pageSize = 8;
@@ -20,7 +19,6 @@ const UsersList = () => {
     useEffect(() => {
         api.users.fetchAll().then((data) => {
             setUsers(data);
-            setInitialUsers(data);
         });
     }, []);
     const handleDelete = (userId) => {
@@ -47,7 +45,6 @@ const UsersList = () => {
     const handleProfessionSelect = (item) => {
         setSelectedProf(item);
         setSearchUser("");
-        setUsers(initialUsers);
     };
 
     const handlePageChange = (pageIndex) => {
@@ -58,13 +55,21 @@ const UsersList = () => {
     };
 
     if (users) {
-        const filteredUsers = selectedProf
-            ? users.filter(
-                  (user) =>
-                      JSON.stringify(user.profession) ===
-                      JSON.stringify(selectedProf)
-              )
-            : users;
+        let filteredUsers = null;
+        if (selectedProf) {
+            filteredUsers = users.filter(
+                (user) =>
+                    JSON.stringify(user.profession) ===
+                    JSON.stringify(selectedProf)
+            );
+        } else if (searchUser) {
+            filteredUsers = users.filter((user) => {
+                const serachRegExp = new RegExp(`${searchUser}`);
+                return user.name.search(serachRegExp) !== -1;
+            });
+        } else {
+            filteredUsers = users;
+        }
 
         const count = filteredUsers.length;
         const sortedUsers = _.orderBy(
@@ -79,17 +84,6 @@ const UsersList = () => {
 
         const handleSearch = (e) => {
             setSearchUser(e.target.value);
-
-            if (e.target.value !== "") {
-                setUsers(
-                    initialUsers.filter((user) => {
-                        const serachRegExp = new RegExp(`${e.target.value}`);
-                        return user.name.search(serachRegExp) !== -1;
-                    })
-                );
-            } else {
-                setUsers(initialUsers);
-            }
         };
 
         return (
