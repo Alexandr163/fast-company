@@ -3,14 +3,14 @@ import PropTypes from "prop-types";
 
 const TextField = ({ label, type, name, value, onChange, error }) => {
     const [showPassword, setShowPassword] = useState(false);
+
     const handleChange = ({ target }) => {
         onChange({ name: target.name, value: target.value });
     };
-
     const getInputClasses = () => {
         return "form-control" + (error ? " is-invalid" : "");
     };
-    const toogleShowPassword = () => {
+    const toggleShowPassword = () => {
         setShowPassword((prevState) => !prevState);
     };
     return (
@@ -29,7 +29,7 @@ const TextField = ({ label, type, name, value, onChange, error }) => {
                     <button
                         className="btn btn-outline-secondary"
                         type="button"
-                        onClick={toogleShowPassword}
+                        onClick={toggleShowPassword}
                     >
                         <i
                             className={
@@ -46,7 +46,6 @@ const TextField = ({ label, type, name, value, onChange, error }) => {
 TextField.defaultProps = {
     type: "text"
 };
-
 TextField.propTypes = {
     label: PropTypes.string,
     type: PropTypes.string,

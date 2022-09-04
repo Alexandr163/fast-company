@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { validator } from "../../utils/validator";
 import TextField from "../common/form/textField";
 import CheckBoxField from "../common/form/checkBoxField";
@@ -29,7 +29,7 @@ const LoginForm = () => {
             isRequired: {
                 message: "Пароль обязателен для заполнения"
             },
-            isСapitalSymbol: {
+            isCapitalSymbol: {
                 message: "Пароль должен содержать хотя бы одну заглавную букву"
             },
             isContainDigit: {
@@ -50,6 +50,7 @@ const LoginForm = () => {
         return Object.keys(errors).length === 0;
     };
     const isValid = Object.keys(errors).length === 0;
+
     const handleSubmit = (e) => {
         e.preventDefault();
         const isValid = validate();
@@ -76,15 +77,14 @@ const LoginForm = () => {
             <CheckBoxField
                 value={data.stayOn}
                 onChange={handleChange}
-                name="StayOn"
+                name="stayOn"
             >
                 Оставаться в системе
             </CheckBoxField>
-
             <button
+                className="btn btn-primary w-100 mx-auto"
                 type="submit"
                 disabled={!isValid}
-                className="btn btn-primary w-100 mx-auto"
             >
                 Submit
             </button>

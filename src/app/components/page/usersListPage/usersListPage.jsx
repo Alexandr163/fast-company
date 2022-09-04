@@ -104,7 +104,6 @@ const UsersListPage = () => {
                 <div className="d-flex flex-column">
                     <SearchStatus length={count} />
                     <input
-                        className="form-control"
                         type="text"
                         name="searchQuery"
                         placeholder="Search..."

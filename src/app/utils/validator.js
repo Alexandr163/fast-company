@@ -16,7 +16,7 @@ export function validator(data, config) {
                 statusValidate = !emailRegExp.test(data);
                 break;
             }
-            case "isСapitalSymbol": {
+            case "isCapitalSymbol": {
                 const capitalRegExp = /[A-Z]+/g;
                 statusValidate = !capitalRegExp.test(data);
                 break;
@@ -30,7 +30,6 @@ export function validator(data, config) {
                 statusValidate = data.length < config.value;
                 break;
             }
-
             default:
                 break;
         }

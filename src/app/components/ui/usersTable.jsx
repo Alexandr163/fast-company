@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+
 import BookMark from "../common/bookmark";
 import Qualities from "./qualities";
 import Table from "../common/table";
@@ -10,7 +11,8 @@ const UserTable = ({
     onSort,
     selectedSort,
     onToggleBookMark,
-    onDelete
+    onDelete,
+    ...rest
 }) => {
     const columns = {
         name: {
@@ -46,7 +48,7 @@ const UserTable = ({
                     onClick={() => onDelete(user._id)}
                     className="btn btn-danger"
                 >
-                    Удалить
+                    delete
                 </button>
             )
         }
