@@ -24,7 +24,6 @@ const Comments = () => {
         });
     };
     const sortedComments = orderBy(comments, ["created_at"], ["dasc"]);
-    console.log(sortedComments);
     return (
         <>
             <div className="col-md-8">
