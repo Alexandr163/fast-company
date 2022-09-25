@@ -48,7 +48,7 @@ const UserTable = ({
                     onClick={() => onDelete(user._id)}
                     className="btn btn-danger"
                 >
-                    Удалить
+                    delete
                 </button>
             )
         }

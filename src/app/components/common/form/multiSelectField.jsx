@@ -8,10 +8,9 @@ const MultiSelectField = ({ options, onChange, name, label, defaultValue }) => {
             ? Object.values(options)
             : options;
 
-            const handleChange = (value) => {
+    const handleChange = (value) => {
         onChange({ name: name, value });
     };
-
     return (
         <div className="mb-4">
             <label className="form-label">{label}</label>

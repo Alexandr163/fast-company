@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
-import api from "../../../../api";
-import { displayDate } from "../../../../utils/displayDate";
 import PropTypes from "prop-types";
-
+import { displayDate } from "../../../utils/displayDate";
+import API from "../../../api";
 const Comment = ({
     content,
     created_at: created,
@@ -14,7 +13,7 @@ const Comment = ({
     const [isLoading, setIsLoading] = useState(false);
     useEffect(() => {
         setIsLoading(true);
-        api.users.getById(userId).then((data) => {
+        API.users.getById(userId).then((data) => {
             setUser(data);
             setIsLoading(false);
         });
