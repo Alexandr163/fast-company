@@ -5,10 +5,6 @@ import { toast } from "react-toastify";
 
 const ProfessionContext = React.createContext();
 
-export const useProfessions = () => {
-    return useContext(ProfessionContext);
-};
-
 export const useProfession = () => {
     return useContext(ProfessionContext);
 };
@@ -26,10 +22,9 @@ export const ProfessionProvider = ({ children }) => {
             setError(null);
         }
     }, [error]);
-    function errorcatcher(error) {
+    function errorCatcher(error) {
         const { message } = error.response.data;
         setError(message);
-        setLoading();
     }
 
     function getProfession(id) {
@@ -42,7 +37,7 @@ export const ProfessionProvider = ({ children }) => {
             setProfessions(content);
             setLoading(false);
         } catch (error) {
-            errorcatcher(error);
+            errorCatcher(error);
         }
     }
 

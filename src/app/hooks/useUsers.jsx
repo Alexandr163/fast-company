@@ -28,10 +28,10 @@ const UserProvider = ({ children }) => {
             setUsers(content);
             setLoading(false);
         } catch (error) {
-            errorcatcher(error);
+            errorCatcher(error);
         }
     }
-    function errorcatcher(error) {
+    function errorCatcher(error) {
         const { message } = error.response.data;
         setError(message);
         setLoading();
