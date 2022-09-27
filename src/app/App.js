@@ -12,6 +12,7 @@ function App() {
     return (
         <div>
             <NavBar />
+
             <QualitiesProvider>
                 <ProfessionProvider>
                     <Switch>
@@ -25,6 +26,7 @@ function App() {
                     </Switch>
                 </ProfessionProvider>
             </QualitiesProvider>
+
             <ToastContainer />
         </div>
     );

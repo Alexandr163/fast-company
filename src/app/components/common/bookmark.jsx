@@ -2,8 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 const BookMark = ({ status, ...rest }) => {
     return (
-        <button className="btn btn-outline-danger" {...rest}>
-            <i className={"bi bi-heart" + (status ? "bi bi-heart-fill" : "")}></i>
+        <button {...rest}>
+            <i className={"bi bi-bookmark" + (status ? "-heart-fill" : "")}></i>
         </button>
     );
 };

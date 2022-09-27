@@ -1,84 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3ce93e6-7276-4721-a53c-a20672f09913" name="Changes" comment="" />
+    <list default="true" id="9b7f2018-4f24-4470-b010-f17d40ed635b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2BWBjsY3nzsoJVpoaGaqeZs2W9p" />
+  <component name="ProjectId" id="2FIXaq2zLrStZYlvT9TqITqkCQj" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Project.color": "425505",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "H:/DevCourse/React_module/fast-company-before-update",
+    "last_opened_file_path": "C:/Users/shado/OneDrive/Рабочий стол/hw",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b3ce93e6-7276-4721-a53c-a20672f09913" name="Changes" comment="" />
-      <created>1657012098489</created>
+      <changelist id="9b7f2018-4f24-4470-b010-f17d40ed635b" name="Changes" comment="" />
+      <created>1664180638025</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1657012098489</updated>
-      <workItem from="1657012102877" duration="3000" />
-      <workItem from="1657134142814" duration="21000" />
-      <workItem from="1657134168042" duration="108000" />
-      <workItem from="1657134743070" duration="853000" />
-      <workItem from="1657736055131" duration="56000" />
-      <workItem from="1657806462019" duration="878000" />
-      <workItem from="1658606691607" duration="81000" />
-      <workItem from="1658607621489" duration="192000" />
-      <workItem from="1658648629047" duration="109000" />
-      <workItem from="1658650456047" duration="12479000" />
-      <workItem from="1658766366526" duration="195000" />
-      <workItem from="1658766577134" duration="199000" />
-      <workItem from="1658766788191" duration="75000" />
-      <workItem from="1658766875794" duration="90000" />
-      <workItem from="1658779837641" duration="73000" />
-      <workItem from="1659099766934" duration="539000" />
-      <workItem from="1659789534368" duration="163000" />
-      <workItem from="1660665023050" duration="172000" />
-      <workItem from="1661591841293" duration="2152000" />
-      <workItem from="1661672128757" duration="3892000" />
-      <workItem from="1662299277943" duration="19000" />
+      <updated>1664180638025</updated>
+      <workItem from="1664180639368" duration="5616000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
 </project>
