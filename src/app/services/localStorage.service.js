@@ -8,7 +8,6 @@ export function setTokens({ refreshToken, idToken, expiresIn = 3600 }) {
     localStorage.setItem(REFRESH_KEY, refreshToken);
     localStorage.setItem(EXPIRES_KEY, expiresDate);
 }
-
 export function getAccessToken() {
     return localStorage.getItem(TOKEN_KEY);
 }
@@ -25,5 +24,4 @@ const localStorageService = {
     getRefreshToken,
     getTokenExpiresDate
 };
-
 export default localStorageService;
