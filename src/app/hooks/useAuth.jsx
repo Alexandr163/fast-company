@@ -63,6 +63,14 @@ const AuthProvider = ({ children }) => {
         return Math.floor(Math.random() * (max - min + 1) + min);
     }
 
+    async function updateUser(data) {
+        try {
+            userService.update(data);
+        } catch (error) {
+            errorCatcher(error);
+        }
+    }
+
     async function signUp({ email, password, ...rest }) {
         try {
             const { data } = await httpAuth.post(`accounts:signUp`, {
@@ -107,6 +115,7 @@ const AuthProvider = ({ children }) => {
             errorCatcher(error);
         }
     }
+
     function errorCatcher(error) {
         const { message } = error.response.data;
         setError(message);
@@ -135,7 +144,9 @@ const AuthProvider = ({ children }) => {
         }
     }, [error]);
     return (
-        <AuthContext.Provider value={{ signUp, logIn, logOut, currentUser }}>
+        <AuthContext.Provider
+            value={{ signUp, logIn, updateUser, logOut, currentUser }}
+        >
             {!isLoading ? children : "Loading..."}
         </AuthContext.Provider>
     );
