@@ -5,6 +5,7 @@ import { useComments } from "../../hooks/useComments";
 
 const Comments = () => {
     const { createComment, comments, removeComment } = useComments();
+
     const handleSubmit = (data) => {
         createComment(data);
         // api.comments

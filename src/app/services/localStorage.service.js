@@ -27,6 +27,7 @@ export function removeAuthData() {
     localStorage.removeItem(REFRESH_KEY);
     localStorage.removeItem(EXPIRES_KEY);
 }
+
 export function getTokenExpiresDate() {
     return localStorage.getItem(EXPIRES_KEY);
 }

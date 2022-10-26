@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9b7f2018-4f24-4470-b010-f17d40ed635b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/page/editUserPage/editUserPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/page/editUserPage/editUserPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/ui/qualities/qualitiesList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/ui/qualities/qualitiesList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/hooks/useAuth.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/hooks/useAuth.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layouts/users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layouts/users.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/services/http.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/http.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/services/user.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/user.service.js" afterDir="false" />
-    </list>
+    <list default="true" id="9b7f2018-4f24-4470-b010-f17d40ed635b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,6 +41,7 @@
       <workItem from="1664180639368" duration="5616000" />
       <workItem from="1666109090560" duration="31000" />
       <workItem from="1666201431798" duration="29000" />
+      <workItem from="1666285765501" duration="13000" />
     </task>
     <servers />
   </component>
