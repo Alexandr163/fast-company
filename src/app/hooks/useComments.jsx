@@ -1,10 +1,10 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import PropTypes from "prop-types";
+import { toast } from "react-toastify";
 import { useParams } from "react-router-dom";
 import { useAuth } from "./useAuth";
 import { nanoid } from "nanoid";
 import commentService from "../services/comment.service";
-import { toast } from "react-toastify";
 
 const CommentsContext = React.createContext();
 
@@ -69,7 +69,6 @@ export const CommentsProvider = ({ children }) => {
             setError(null);
         }
     }, [error]);
-
     return (
         <CommentsContext.Provider
             value={{ comments, createComment, isLoading, removeComment }}
@@ -78,6 +77,7 @@ export const CommentsProvider = ({ children }) => {
         </CommentsContext.Provider>
     );
 };
+
 CommentsProvider.propTypes = {
     children: PropTypes.oneOfType([
         PropTypes.arrayOf(PropTypes.node),
