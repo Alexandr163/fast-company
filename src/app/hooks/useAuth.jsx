@@ -46,6 +46,7 @@ const AuthProvider = ({ children }) => {
                 switch (message) {
                     case "INVALID_PASSWORD":
                         throw new Error("Email или пароль введены некорректно");
+
                     default:
                         throw new Error(
                             "Слишком много попыток входа. Попробуйте позже"
@@ -62,7 +63,14 @@ const AuthProvider = ({ children }) => {
     function randomInt(min, max) {
         return Math.floor(Math.random() * (max - min + 1) + min);
     }
-
+    async function updateUserData(data) {
+        try {
+            const { content } = await userService.update(data);
+            setUser(content);
+        } catch (error) {
+            errorCatcher(error);
+        }
+    }
     async function signUp({ email, password, ...rest }) {
         try {
             const { data } = await httpAuth.post(`accounts:signUp`, {
@@ -95,7 +103,6 @@ const AuthProvider = ({ children }) => {
                     throw errorObject;
                 }
             }
-            // throw new Error
         }
     }
     async function createUser(data) {
@@ -135,7 +142,9 @@ const AuthProvider = ({ children }) => {
         }
     }, [error]);
     return (
-        <AuthContext.Provider value={{ signUp, logIn, logOut, currentUser }}>
+        <AuthContext.Provider
+            value={{ signUp, logIn, currentUser, logOut, updateUserData }}
+        >
             {!isLoading ? children : "Loading..."}
         </AuthContext.Provider>
     );

@@ -1,11 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9b7f2018-4f24-4470-b010-f17d40ed635b" name="Changes" comment="" />
+    <list default="true" id="9b7f2018-4f24-4470-b010-f17d40ed635b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.env.development" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/common/protectedRoute.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/store/createStore.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/store/qualities.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/common/bookmark.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/common/bookmark.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/common/comments/comment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/common/comments/comment.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/page/editUserPage/editUserPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/page/editUserPage/editUserPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/page/usersListPage/usersListPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/page/usersListPage/usersListPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/ui/comments.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/ui/comments.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/ui/loginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/ui/loginForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/ui/navProfile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/ui/navProfile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/ui/qualities/qualitiesList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/ui/qualities/qualitiesList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/ui/qualities/quality.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/ui/qualities/quality.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/ui/registerForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/ui/registerForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/hooks/useAuth.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/hooks/useAuth.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/hooks/useComments.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/hooks/useComments.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/hooks/useUsers.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/hooks/useUsers.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layouts/logOut.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layouts/logOut.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layouts/users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layouts/users.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/http.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/http.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/localStorage.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/localStorage.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/user.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/user.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -20,7 +52,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/shado/OneDrive/Рабочий стол/hw",
+    "last_opened_file_path": "H:/DevCourse/React_module/reactredux",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
@@ -36,6 +68,9 @@
       <option name="presentableId" value="Default" />
       <updated>1664180638025</updated>
       <workItem from="1664180639368" duration="5616000" />
+      <workItem from="1667239240320" duration="548000" />
+      <workItem from="1667242381755" duration="118000" />
+      <workItem from="1667321218252" duration="52000" />
     </task>
     <servers />
   </component>
