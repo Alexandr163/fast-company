@@ -47,6 +47,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -57,8 +58,20 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
+=======
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;H:/DevCourse/React_module/fast-company&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+>>>>>>> 52ac38d6e104b7846124875277d933cfd6f5511a
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -68,9 +81,15 @@
       <option name="presentableId" value="Default" />
       <updated>1664180638025</updated>
       <workItem from="1664180639368" duration="5616000" />
+<<<<<<< HEAD
       <workItem from="1667239240320" duration="548000" />
       <workItem from="1667242381755" duration="118000" />
       <workItem from="1667321218252" duration="52000" />
+=======
+      <workItem from="1666109090560" duration="31000" />
+      <workItem from="1666201431798" duration="29000" />
+      <workItem from="1666285765501" duration="13000" />
+>>>>>>> 52ac38d6e104b7846124875277d933cfd6f5511a
     </task>
     <servers />
   </component>
