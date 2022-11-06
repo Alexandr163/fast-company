@@ -15,7 +15,7 @@ import {
 import {
     getProfessions,
     getProfessionsLoadingStatus
-} from "../../../store/porofessions";
+} from "../../../store/professions";
 import { getCurrentUserData } from "../../../store/users";
 
 const EditUserPage = () => {

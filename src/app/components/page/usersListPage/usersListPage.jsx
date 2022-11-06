@@ -10,13 +10,15 @@ import { useSelector } from "react-redux";
 import {
     getProfessions,
     getProfessionsLoadingStatus
-} from "../../../store/porofessions";
+} from "../../../store/professions";
 import { getCurrentUserId, getUsersList } from "../../../store/users";
+
 const UsersListPage = () => {
     const users = useSelector(getUsersList());
     const currentUserId = useSelector(getCurrentUserId());
+
     const professions = useSelector(getProfessions());
-    const professionLoading = useSelector(getProfessionsLoadingStatus());
+    const professionsLoading = useSelector(getProfessionsLoadingStatus());
     const [currentPage, setCurrentPage] = useState(1);
     const [searchQuery, setSearchQuery] = useState("");
     const [selectedProf, setSelectedProf] = useState();
@@ -90,7 +92,7 @@ const UsersListPage = () => {
 
         return (
             <div className="d-flex">
-                {professions && !professionLoading && (
+                {professions && !professionsLoading && (
                     <div className="d-flex flex-column flex-shrink-0 p-3">
                         <GroupList
                             selectedItem={selectedProf}

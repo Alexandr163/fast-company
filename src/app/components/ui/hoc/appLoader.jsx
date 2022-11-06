@@ -2,17 +2,17 @@ import { useEffect } from "react";
 import PropTypes from "prop-types";
 import { useDispatch, useSelector } from "react-redux";
 import {
-    getIsLoadingStatus,
     getIsLoggedIn,
+    getUsersLoadingStatus,
     loadUsersList
 } from "../../../store/users";
 import { loadQualitiesList } from "../../../store/qualities";
-import { loadProfessionsList } from "../../../store/porofessions";
+import { loadProfessionsList } from "../../../store/professions";
 
 const AppLoader = ({ children }) => {
     const dispatch = useDispatch();
     const isLoggedIn = useSelector(getIsLoggedIn());
-    const userStatusLoading = useSelector(getIsLoadingStatus());
+    const usersStatusLoading = useSelector(getUsersLoadingStatus());
     useEffect(() => {
         dispatch(loadQualitiesList());
         dispatch(loadProfessionsList());
@@ -20,7 +20,7 @@ const AppLoader = ({ children }) => {
             dispatch(loadUsersList());
         }
     }, [isLoggedIn]);
-    if (userStatusLoading) return "Loading...";
+    if (usersStatusLoading) return "Loading...";
     return children;
 };
 
@@ -30,4 +30,5 @@ AppLoader.propTypes = {
         PropTypes.node
     ])
 };
+
 export default AppLoader;

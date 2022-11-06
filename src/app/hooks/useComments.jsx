@@ -15,7 +15,7 @@ export const useComments = () => {
 
 export const CommentsProvider = ({ children }) => {
     const { userId } = useParams();
-    const currentUsrId = useSelector(getCurrentUserId());
+    const currentUserId = useSelector(getCurrentUserId());
     const [isLoading, setLoading] = useState(true);
     const [comments, setComments] = useState([]);
     const [error, setError] = useState(null);
@@ -28,7 +28,7 @@ export const CommentsProvider = ({ children }) => {
             _id: nanoid(),
             pageId: userId,
             created_at: Date.now(),
-            userId: currentUsrId
+            userId: currentUserId
         };
         try {
             const { content } = await commentService.createComment(comment);
